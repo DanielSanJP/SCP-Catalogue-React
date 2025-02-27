@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
+// ✅ Add "base" option for GitHub Pages
 export default defineConfig({
   plugins: [react()],
-})
+  base: "/SCP-Catalogue-React/",  // 👈 Replace with your GitHub repo name
+});
