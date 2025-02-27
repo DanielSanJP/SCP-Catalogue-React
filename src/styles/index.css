@@ -1,0 +1,44 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #13100f;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  cursor: pointer;
+}
+
+header .logo:hover {
+  transition: 0.3s;
+  transform: scale(0.9);
+}
+
+a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.title {
+  padding: 20px;
+  text-align: center;
+}
+
+#root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Responsive Image Styling */
+.scpImagePage {
+  width: 45%;
+}
+
+@media only screen and (max-width: 800px) {
+  .scpImagePage {
+    width: 80%;
+  }
+}
