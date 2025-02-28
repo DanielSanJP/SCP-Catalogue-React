@@ -113,3 +113,43 @@
   height: 60px;
   width: auto;
 }
+
+.scp-detail {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.scpHeader {
+  background: #241e1c;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.scpImagePage {
+  width: 60%;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+}
+
+.readCard {
+  background: #241e1c;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 80%;
+  text-align: left;
+}
+
+.specs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.backButton {
+  margin-top: 20px;
+}

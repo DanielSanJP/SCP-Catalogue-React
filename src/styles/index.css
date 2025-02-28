@@ -5,9 +5,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.logo {
-  cursor: pointer;
-}
 
 header .logo:hover {
   transition: 0.3s;

@@ -1,23 +1,33 @@
 import React from "react";
-import SCPItem from "./components/SCPItem";
-import scpList from "./data/data.json"; // Load SCP data
-import "./styles/App.css"; // ✅ Import SCP Card Styles
-import Logo from "../public/assets/SCP LOGO.png"; // Load SCP Foundation logo
+import { Routes, Route, Link } from "react-router-dom"; // ✅ Import Link
+import SCPList from "./components/SCPList";
+import SCPDetail from "./components/SCPDetail";
+import "./styles/App.css";
 
-function App() {
+const App = () => {
+  const baseURL = process.env.PUBLIC_URL || "."; // ✅ Ensures correct image path
+
   return (
-    <>
+    <div>
       <div className="header">
-        <img src={Logo} alt="SCP Foundation" />{" "}
+        {/* ✅ Clickable Logo */}
+        <Link to="/" className="logo-link">
+          <img
+            src={`${baseURL}/assets/SCP LOGO.png`}
+            alt="SCP Logo"
+            className="logo"
+          />
+        </Link>
+
+        <h1>SCP Catalogue</h1>
       </div>
-      <h1>SCP Catalogue</h1>
-      <div className="scp-catalog">
-        {scpList.map((scp) => (
-          <SCPItem key={scp.item} scp={scp} />
-        ))}
-      </div>
-    </>
+
+      <Routes>
+        <Route path="/" element={<SCPList />} />
+        <Route path="/scp/:id" element={<SCPDetail />} />
+      </Routes>
+    </div>
   );
-}
+};
 
 export default App;

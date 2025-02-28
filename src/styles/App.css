@@ -8,6 +8,7 @@
 /* HEADER STYLES */
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px 15px;
@@ -32,6 +33,7 @@ h1 {
   transition: filter 300ms;
 }
 .logo:hover {
+  cursor: pointer;
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {

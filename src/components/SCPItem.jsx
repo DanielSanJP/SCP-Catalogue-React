@@ -1,23 +1,28 @@
 import React from "react";
-import "../styles/catalogue.css"; // ✅ Import SCP Card Styles
+import { Link } from "react-router-dom";
+import "../styles/catalogue.css";
 
 const SCPItem = ({ scp }) => {
+  const baseURL = process.env.PUBLIC_URL || "."; // ✅ Correct base path for GitHub Pages
+
   return (
-    <div className="scp-card">
+    <Link to={`/scp/${scp.item}`} className="scp-card">
       <div className="cardContainment">
         <h2 className="cardTitle">#{scp.item}</h2>
         <img
           className="cLevel"
-          src={`${scp.containmentIcon}`}
+          src={`${baseURL}/${scp.containmentIcon}`}
           alt={scp.containment}
         />
       </div>
-
       <div className="image-container">
-        <img className="cardImg" src={`${scp.image}`} alt={scp.name} />
+        <img
+          className="cardImg"
+          src={`${baseURL}/${scp.image}`}
+          alt={scp.name}
+        />
         <div className="cardName">{scp.name}</div>
       </div>
-
       <div className="cardDesc">
         <div className="StatColumn">
           <strong>Disruption:</strong> {scp.disruption}
@@ -28,13 +33,12 @@ const SCPItem = ({ scp }) => {
         <div className="StatColumn">
           <strong>Clearance:</strong> {scp.clearance}
         </div>
-
         <div className="cardStats">
           <div className="StatColumn">#{scp.item}</div>
           <div className="StatColumn">{scp.containment}</div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
