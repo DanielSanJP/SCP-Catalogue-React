@@ -8,9 +8,9 @@ const SCPDetail = () => {
   const baseURL = import.meta.env.BASE_URL || ".";
 
   useEffect(() => {
-    console.log(`🔍 Fetching: ${baseURL}/data.json`); // ✅ Debugging log
+    console.log(`🔍 Fetching: ${baseURL}data.json`); // ✅ Debugging log
 
-    fetch(`${baseURL}/data.json`)
+    fetch(`${baseURL}data.json`)
       .then((res) => {
         console.log("📄 Response Status:", res.status); // ✅ Debugging log
         if (!res.ok) {
@@ -43,7 +43,7 @@ const SCPDetail = () => {
       <div className="image-container">
         <img
           className="scpImagePage"
-          src={`${baseURL}/${scp.image}`}
+          src={`${baseURL}${scp.image}`}
           alt={scp.name}
         />
       </div>

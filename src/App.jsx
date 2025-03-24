@@ -13,7 +13,7 @@ const App = () => {
         {/* ✅ Clickable Logo */}
         <Link to="/" className="logo-link">
           <img
-            src={`${import.meta.env.BASE_URL}SCP%20LOGO.png`}
+            src={`${import.meta.env.BASE_URL}assets/SCP Logo.png`}
             alt="SCP Logo"
             className="logo"
           />

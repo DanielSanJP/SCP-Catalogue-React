@@ -8,9 +8,9 @@ const SCPList = () => {
 
   useEffect(() => {
     const baseURL = import.meta.env.BASE_URL || ".";
-    console.log("🔍 Trying to fetch:", `${baseURL}/data.json`); // ✅ Debugging log
+    console.log("🔍 Trying to fetch:", `${baseURL}data.json`);
 
-    fetch(`${baseURL}/data.json`) // ✅ Works for localhost & GitHub Pages
+    fetch(`${import.meta.env.BASE_URL}data.json`)
       .then((response) => response.json())
       .then((data) => {
         console.log("📊 Data received:", data);

@@ -11,14 +11,14 @@ const SCPItem = ({ scp }) => {
         <h2 className="cardTitle">#{scp.item}</h2>
         <img
           className="cLevel"
-          src={`${baseURL}/${scp.containmentIcon}`}
+          src={`${baseURL}${scp.containmentIcon}`}
           alt={scp.containment}
         />
       </div>
       <div className="image-container">
         <img
           className="cardImg"
-          src={`${baseURL}/${scp.image}`}
+          src={`${baseURL}${scp.image}`}
           alt={scp.name}
         />
         <div className="cardName">{scp.name}</div>
