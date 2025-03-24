@@ -5,6 +5,6 @@ export default defineConfig({
   base: "/SCP-Catalogue-React/",
   plugins: [react()],
   build: {
-    outDir: "docs",
+    outDir: "dist",
   },
 });
