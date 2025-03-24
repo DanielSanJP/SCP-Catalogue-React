@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "vite build",
-    "deploy": "git add docs && git commit -m 'Update docs' && git push"
+    "deploy": "git add dist && git commit -m 'Update dist' && git push"
   },
   "dependencies": {
     "react": "^19.0.0",
