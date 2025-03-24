@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/catalogue.css";
 
 const SCPItem = ({ scp }) => {
-  const baseURL = process.env.PUBLIC_URL || "."; // ✅ Correct base path for GitHub Pages
+  const baseURL = import.meta.env.BASE_URL || ".";
 
   return (
     <Link to={`/scp/${scp.item}`} className="scp-card">

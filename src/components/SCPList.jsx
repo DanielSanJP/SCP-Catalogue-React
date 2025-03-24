@@ -7,7 +7,7 @@ const SCPList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const baseURL = process.env.PUBLIC_URL || "."; // ✅ Adjust for GitHub Pages
+    const baseURL = import.meta.env.BASE_URL || ".";
     console.log("🔍 Trying to fetch:", `${baseURL}/data.json`); // ✅ Debugging log
 
     fetch(`${baseURL}/data.json`) // ✅ Works for localhost & GitHub Pages

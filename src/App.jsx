@@ -5,7 +5,7 @@ import SCPDetail from "./components/SCPDetail";
 import "./styles/App.css";
 
 const App = () => {
-  const baseURL = process.env.PUBLIC_URL || "."; // ✅ Ensures correct image path
+  const baseURL = import.meta.env.BASE_URL || ".";
 
   return (
     <div>

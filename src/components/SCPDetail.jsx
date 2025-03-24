@@ -5,7 +5,7 @@ import "../styles/catalogue.css";
 const SCPDetail = () => {
   const { id } = useParams(); // ✅ Get SCP ID from URL
   const [scp, setScp] = useState(null);
-  const baseURL = process.env.PUBLIC_URL || "."; // ✅ Adjusts for GitHub Pages
+  const baseURL = import.meta.env.BASE_URL || ".";
 
   useEffect(() => {
     console.log(`🔍 Fetching: ${baseURL}/data.json`); // ✅ Debugging log
