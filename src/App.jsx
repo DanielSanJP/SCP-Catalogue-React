@@ -5,7 +5,7 @@ import SCPDetail from "./components/SCPDetail";
 import "./styles/App.css";
 
 const App = () => {
-  const baseURL = process.env.PUBLIC_URL || "."; // ✅ Ensures correct image path
+  const baseURL = import.meta.env.BASE_URL || ".";
 
   return (
     <div>
@@ -13,7 +13,7 @@ const App = () => {
         {/* ✅ Clickable Logo */}
         <Link to="/" className="logo-link">
           <img
-            src={`${baseURL}/assets/SCP LOGO.png`}
+            src={`${import.meta.env.BASE_URL}assets/scp-logo.png`}
             alt="SCP Logo"
             className="logo"
           />

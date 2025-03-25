@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/catalogue.css";
 
 const SCPItem = ({ scp }) => {
-  const baseURL = process.env.PUBLIC_URL || "."; // ✅ Correct base path for GitHub Pages
+  const baseURL = import.meta.env.BASE_URL || ".";
 
   return (
     <Link to={`/scp/${scp.item}`} className="scp-card">
@@ -11,14 +11,14 @@ const SCPItem = ({ scp }) => {
         <h2 className="cardTitle">#{scp.item}</h2>
         <img
           className="cLevel"
-          src={`${baseURL}/${scp.containmentIcon}`}
+          src={`${baseURL}${scp.containmentIcon}`}
           alt={scp.containment}
         />
       </div>
       <div className="image-container">
         <img
           className="cardImg"
-          src={`${baseURL}/${scp.image}`}
+          src={`${baseURL}${scp.image}`}
           alt={scp.name}
         />
         <div className="cardName">{scp.name}</div>
